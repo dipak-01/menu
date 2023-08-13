@@ -1,0 +1,53 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-color: black;
+}
+main {
+  background-image: url("images/img.avif");
+  background-size: cover;
+  background-position: center 0%;
+  position: relative;
+  z-index: 2;
+  transition: transform 500ms cubic-bezier(.13,.53,.38,97);
+}
+#nav-toggle {
+  height: 5rem;
+  width: 5rem;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  bottom: 3rem;
+  transform: translate(-50%);
+  background-color: antiquewhite;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: transform, background-color;
+  transition-timing-function: ease;
+  transition-duration: 400ms;
+}
+#nav-toggle:hover {
+  transform: translateX(-50%) scale(1.14);
+}
+#nav-toggle:active {
+  transform: translate(-50%) scale(0.96);
+}
+#nav-toggle > i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  color: yellow;
+  font-size: 1.76rem;
+  opacity: 0%;
+}
+body:not([data-nav="true"])>#nav-toggle:hower .open{
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+}
+body:not([data-nav="false"])>#nav-toggle:hower .close{
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+}

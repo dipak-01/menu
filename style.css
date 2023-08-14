@@ -54,3 +54,26 @@ body:not([data-nav="false"])>#nav-toggle:hower .close{
 #nav-links >.nav-link{
     text-decoration: none;
 }
+#nav-links > .nav-link > .nav-link-lable{
+    color: white;
+    font-size: 1.75rem;
+    margin: 0;
+    text-transform: uppercase;
+
+}
+#nav-links > .nav-link > .nav-link-image{
+    width: max(20vw,400px);
+    aspect-ratio: 1.8/1;
+    border-radius: 0.5rem;
+    margin-top: 0.75rem;
+    object-fit: cover;
+}
+nav{
+    height: 50vh;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    z-index: 1;
+
+}
